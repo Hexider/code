@@ -1,0 +1,17 @@
+package com.Ascii.Asciinite.init;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.Ascii.Asciinite.blocks.FluidStarTear;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+
+public class ModBlocks
+{
+	public static final List<Block> BLOCKS = new ArrayList<Block>();
+  
+	public static final Block STAR_TEAR_BLOCK = new FluidStarTear("star_tear", ModFluids.STAR_TEAR_FLUID, Material.WATER);
+	public static final Block CSTAR_TEAR_BLOCK = new FluidStarTear("cstar_tear", ModFluids.CSTAR_TEAR_FLUID, Material.WATER);
+}
