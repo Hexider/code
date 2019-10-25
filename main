@@ -1,0 +1,12 @@
+
+	@EventHandler
+	public static void PreInit(FMLPreInitializationEvent event)
+	{
+    	ModFluids.registerFluids();
+		RenderHandler.registerCustomMeshesAndStates();
+		GameRegistry.registerWorldGenerator(new ModWorldGen(), 3);
+		ModEntitys.registerEntities();
+		RenderHandler.registyEntityRenders();
+    	GameRegistry.registerWorldGenerator(new ModWorldGenerator(), 0); 
+    	GameRegistry.registerWorldGenerator(new ModWorldGenerator1(), 0);
+	}
