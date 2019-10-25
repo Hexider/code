@@ -1,0 +1,25 @@
+package com.Ascii.Asciinite.init;
+
+import com.Ascii.Asciinite.fluids.FluidLiquidStarTear;
+
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidRegistry;
+
+public class ModFluids
+{
+	public static final Fluid STAR_TEAR_FLUID = new FluidLiquidStarTear("star_tear", new ResourceLocation("ascii:blocks/stear_still"), new ResourceLocation("ascii:blocks/stear_flow"), new ResourceLocation("ascii:blocks/stear_overlay"));
+	public static final Fluid CSTAR_TEAR_FLUID = new FluidLiquidStarTear("cstar_tear", new ResourceLocation("ascii:blocks/stear_still"), new ResourceLocation("ascii:blocks/stear_flow"), new ResourceLocation("ascii:blocks/stear_overlay"));
+	
+	public static void registerFluids()
+	{
+		registerFluid(STAR_TEAR_FLUID);
+		registerFluid(CSTAR_TEAR_FLUID);
+	}
+	
+	public static void registerFluid(Fluid fluid)
+	{
+		FluidRegistry.registerFluid(fluid);
+		FluidRegistry.addBucketForFluid(fluid);
+	}
+}
